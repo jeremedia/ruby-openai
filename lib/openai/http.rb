@@ -64,8 +64,8 @@ module OpenAI
           raise_error.on_complete(env.merge(body: try_parse_json(chunk)))
         end
 
-        parser.feed(chunk) do |_type, data|
-          user_proc.call(JSON.parse(data)) unless data == "[DONE]"
+        parser.feed(chunk) do |event_type, data|
+          user_proc.call(JSON.parse(data), event_type) unless data == "[DONE]"
         end
       end
     end
