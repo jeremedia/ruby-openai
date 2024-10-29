@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.3.1] - 2024-10-15
+
+### Fixed
+
+- Fix 404 error when using Client#embeddings with Azure - thanks to [@ymtdzzz](https://github.com/ymtdzzz) for raising this in a really clear issue.
+
+## [7.3.0] - 2024-10-11
+
+### Added
+
+- Add ability to (with the right incantations) retrieve the chunks used by an Assistant file search - thanks to [@agamble](https://github.com/agamble) for the addition!
+
+## [7.2.0] - 2024-10-10
+
+### Added
+
+- Add ability to pass parameters to Files#list endpoint - thanks to [@parterburn](https://github.com/parterburn)!
+- Add Velvet observability platform to README - thanks to [@philipithomas](https://github.com/philipithomas)
+- Add Assistants::Messages#delete endpoint - thanks to [@mochetts](https://github.com/mochetts)!
+
 ## [7.1.0] - 2024-06-10
 
 ### Added

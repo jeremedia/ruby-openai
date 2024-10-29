@@ -93,9 +93,9 @@ RSpec.describe OpenAI::Client do
       end
 
       it "does not confuse the clients" do
-        expect(c0).to receive(:get).with(path: "/files").once
-        expect(c1).to receive(:get).with(path: "/files").once
-        expect(c2).to receive(:get).with(path: "/files").once
+        expect(c0).to receive(:get).with(path: "/files", parameters: {}).once
+        expect(c1).to receive(:get).with(path: "/files", parameters: {}).once
+        expect(c2).to receive(:get).with(path: "/files", parameters: {}).once
 
         expect(c0).to receive(:get).with(path: "/fine_tuning/jobs").once
         expect(c1).to receive(:get).with(path: "/fine_tuning/jobs").once
@@ -131,6 +131,36 @@ RSpec.describe OpenAI::Client do
       connection = Faraday.new
       client.faraday_middleware.call(connection)
       expect(connection.builder.handlers).to include Faraday::Response::Logger
+    end
+  end
+
+  context "when calling inspect" do
+    let(:api_key) { "sk-123456789" }
+    let(:organization_id) { "org-123456789" }
+    let(:extra_headers) { { "Other-Auth": "key-123456789" } }
+    let(:uri_base) { "https://example.com/" }
+    let(:request_timeout) { 500 }
+    let(:client) do
+      OpenAI::Client.new(
+        uri_base: uri_base,
+        request_timeout: request_timeout,
+        access_token: api_key,
+        organization_id: organization_id,
+        extra_headers: extra_headers
+      )
+    end
+
+    it "does not expose sensitive information" do
+      expect(client.inspect).not_to include(api_key)
+      expect(client.inspect).not_to include(organization_id)
+      expect(client.inspect).not_to include(extra_headers[:"Other-Auth"])
+    end
+
+    it "does expose non-sensitive information" do
+      expect(client.inspect).to include(uri_base.inspect)
+      expect(client.inspect).to include(request_timeout.inspect)
+      expect(client.inspect).to include(client.object_id.to_s)
+      expect(client.inspect).to include(client.class.to_s)
     end
   end
 end

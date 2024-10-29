@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.openai.com/v1/vector_stores
+    uri: https://api.openai.com/v1/threads
     body:
       encoding: UTF-8
-      string: "{}"
+      string: '{"messages":[{"role":"user","content":"Find the description of a nociceptor."}]}'
     headers:
       Content-Type:
       - application/json
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 15 Oct 2024 07:01:29 GMT
+      - Fri, 11 Oct 2024 14:31:30 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,48 +37,36 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_94ff528d59fed8facc619df94d182c0d
+      - req_476abaa78917a72500a258541a9e645c
       Openai-Processing-Ms:
-      - '46'
+      - '909'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=1HqtluZ3FY7mmMiCBGwiGHdoxwhNuRyIkNaHG3OL7nY-1728975689-1.0.1.1-TCSy92E6brTiGHH4Sob77NntYEWwFM82qEmufR1LIj_c5s4_9p5dCAaqBlLFbRD_OrqUbMa_k1z_EwFGALm5xw;
-        path=/; expires=Tue, 15-Oct-24 07:31:29 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=RTvquL6o4qHueyeVBS1Z2qV4KZ00Gg1Sdmq3CKdoBrA-1728657090-1.0.1.1-ea2tVOzd6t2QhdB2UPLkbMJdJQ3WlMFeKAIyAIUleZAdAOtw33Z07YTTJBIXQb.pJDEt27pHJNP4RpIjE3F9lA;
+        path=/; expires=Fri, 11-Oct-24 15:01:30 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=Dm38neGAiSWdmSLi_A1AbAF4QDEGEwrKnwcuUelRJo0-1728975689933-0.0.1.1-604800000;
+      - _cfuvid=wqvbuE2etd301wgW_PkCGEjUKDNt.HrAg.RV.YVMxZI-1728657090004-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8d2df02cebb3cd54-LHR
+      - 8d0f8dd60b035316-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "vs_Jhsj39YoypHdDXGlrTHtx3ir",
-          "object": "vector_store",
-          "name": null,
-          "status": "completed",
-          "usage_bytes": 0,
-          "created_at": 1728975689,
-          "file_counts": {
-            "in_progress": 0,
-            "completed": 0,
-            "failed": 0,
-            "cancelled": 0,
-            "total": 0
-          },
+          "id": "thread_Z8kflIC6P6N5SpnkPW4q7waD",
+          "object": "thread",
+          "created_at": 1728657089,
           "metadata": {},
-          "expires_after": null,
-          "expires_at": null,
-          "last_active_at": 1728975689
+          "tool_resources": {}
         }
-  recorded_at: Tue, 15 Oct 2024 07:01:29 GMT
+  recorded_at: Fri, 11 Oct 2024 14:31:30 GMT
 recorded_with: VCR 6.1.0

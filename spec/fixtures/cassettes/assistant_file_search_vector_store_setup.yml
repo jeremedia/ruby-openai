@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 15 Oct 2024 07:01:29 GMT
+      - Fri, 11 Oct 2024 14:31:27 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,37 +37,37 @@ http_interactions:
       Openai-Organization:
       - user-jxm65ijkzc1qrfhc0ij8moic
       X-Request-Id:
-      - req_94ff528d59fed8facc619df94d182c0d
+      - req_122732c31102a3f79a74236df3558b04
       Openai-Processing-Ms:
-      - '46'
+      - '84'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=1HqtluZ3FY7mmMiCBGwiGHdoxwhNuRyIkNaHG3OL7nY-1728975689-1.0.1.1-TCSy92E6brTiGHH4Sob77NntYEWwFM82qEmufR1LIj_c5s4_9p5dCAaqBlLFbRD_OrqUbMa_k1z_EwFGALm5xw;
-        path=/; expires=Tue, 15-Oct-24 07:31:29 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=Pz.GEi6q3JvLB.QEmR7xj6a.ujbNzwiTVRmFbOw3Row-1728657087-1.0.1.1-ExYeW36x3CSXvQt3bTmE3OAlLWTsAhdeUmKVD1ZMHf4yl7r0AKakukmRESkvskQgmZv.ShkwwgQx7LxGHqcwfg;
+        path=/; expires=Fri, 11-Oct-24 15:01:27 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=Dm38neGAiSWdmSLi_A1AbAF4QDEGEwrKnwcuUelRJo0-1728975689933-0.0.1.1-604800000;
+      - _cfuvid=NmCAQLVJBB6difSCbalNA9SFNAdRV77gHBJ.WTYWNu8-1728657087722-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8d2df02cebb3cd54-LHR
+      - 8d0f8dcce8bb4142-LHR
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "vs_Jhsj39YoypHdDXGlrTHtx3ir",
+          "id": "vs_aENQHuebOtV0JTXgJF3JTkTU",
           "object": "vector_store",
           "name": null,
           "status": "completed",
           "usage_bytes": 0,
-          "created_at": 1728975689,
+          "created_at": 1728657087,
           "file_counts": {
             "in_progress": 0,
             "completed": 0,
@@ -78,7 +78,7 @@ http_interactions:
           "metadata": {},
           "expires_after": null,
           "expires_at": null,
-          "last_active_at": 1728975689
+          "last_active_at": 1728657087
         }
-  recorded_at: Tue, 15 Oct 2024 07:01:29 GMT
+  recorded_at: Fri, 11 Oct 2024 14:31:27 GMT
 recorded_with: VCR 6.1.0
